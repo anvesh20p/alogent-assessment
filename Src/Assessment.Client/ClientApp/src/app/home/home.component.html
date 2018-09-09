@@ -1,17 +1,18 @@
 
-<div class="col-sm-4" *ngFor="let board of boards">
+<div class="col-sm-4 container" *ngFor="let board of boards;let i =index">
   <div class="card">
     <h3 class="card-header">
-      {{ board.name }}
+      {{ board.Name }}
     </h3>
     <div class="card-body">
       <b>Posts</b>
-      <ul>
+      <ul *ngFor="let post of board.post;let i =index">
+<li><b>{{post.title}}</b> - {{post.information}}, {{post.createdAt | date:short}}</li>
 
       </ul>
     </div>
-    <div class="card-footer text-muted">
-      <small>Created {{ board.createdAt | date:short }}</small>
+    <div class="card-footer text-muted pull-right">
+      <small>Created {{ board.CreatedAt | date:short }}</small>
     </div>
   </div>
 </div>

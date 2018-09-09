@@ -1,5 +1,5 @@
 export class Board {
-  public id: number;
-  public name: string;
-  public createdAt: Date;
+  public Id: number;
+  public Name: string;
+  public CreatedAt: string;
 }
